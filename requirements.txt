@@ -1,0 +1,4 @@
+# Python packages for the finance tool. Tesseract OCR is a separate system install (see Tools\setup.py).
+pdfplumber==0.11.10
+pytesseract==0.3.13
+openpyxl==3.1.5

@@ -1,0 +1,24 @@
+name: checks
+on: [pull_request]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile every module
+        run: python -m compileall -q Tools
+      - name: Refuse private places and statement files
+        run: |
+          git diff --name-only origin/${{ github.base_ref }}...HEAD > changed.txt
+          if grep -Ei '(^|/)(Config|Data|Inbox|_Archive|Dashboard|Knowledge)/|CLAUDE\.local\.md|\.(pdf|xlsx|xls|db|sqlite|zip)$' changed.txt; then
+            echo "A private place or statement file is in this pull request."; exit 1
+          fi
+      - name: Run the tests
+        run: |
+          pip install -r requirements.txt
+          if [ -d Tools/tests ]; then python -m unittest discover -s Tools/tests -v; else echo "No tests yet"; fi

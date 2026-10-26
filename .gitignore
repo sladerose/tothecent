@@ -1,0 +1,18 @@
+# Whitelist: ignore everything, then allow the code, the skills and the generic documents.
+*
+!.gitignore
+!README.md
+!LICENSE.txt
+!CONTRIBUTING.md
+!.github/
+!.github/**
+!CLAUDE.md
+!requirements.txt
+!.claude/
+!.claude/skills/
+!.claude/skills/**
+!Tools/
+!Tools/**
+__pycache__/
+*.pyc
+CLAUDE.local.md

@@ -1,0 +1,29 @@
+{
+  "second_tyme_holder": "Partner",
+  "owners": {
+    "FNB": "Owner",
+    "FNB Credit Card": "Owner",
+    "FNB Money Maximiser": "Owner",
+    "FNB Savings Pockets": "Owner",
+    "TymeBank Current": "Owner",
+    "TymeBank Savings": "Owner",
+    "TymeBank Current (Partner)": "Partner",
+    "TymeBank Savings (Partner)": "Partner",
+    "FNB Home Loan": "Owner",
+    "Nedbank Home Loan": "Owner",
+    "Nedbank": "Owner",
+    "Discovery": "Owner"
+  },
+  "accounts": {},
+  "loan_properties": {
+    "FNB Home Loan": "Property A",
+    "Nedbank Home Loan": "Property B"
+  },
+  "holder_keywords": {},
+  "loan_notes": {},
+  "dashboard_notes": {
+    "cash_missing": "",
+    "net_worth_property": "",
+    "net_worth_cash": ""
+  }
+}
