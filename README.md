@@ -23,6 +23,8 @@ FNB (current account, Money Maximiser, savings pockets, credit card, home loan),
 3. Answer the questions. Claude follows the skill `finance-onboard`.
 4. Each month, drop new statement PDFs into the matching folder under `Inbox` and ask Claude to run the import.
 
+If your bank emails statements and you have attached a mailbox connector such as Gmail or Outlook to Claude, the optional skill `finance-fetch-statements` can find the missing statements and place them in `Inbox`. It only reads mail, uses only senders you confirm and downloads only what you approve.
+
 The dashboard is written to `Dashboard\household-dashboard.html`.
 
 ## How it keeps the numbers right
