@@ -30,4 +30,4 @@ if not args.dry_run:
           f"new transactions: {len(res['new_tx'])}; dashboard {res.get('dashboard')}")
 for w in res["warnings"]:
     print("  WARNING:", w)
-sys.exit(1 if res["failed"] else 0)
+sys.exit(1 if res["failed"] or str(res.get("dashboard", "")).startswith("FAILED") else 0)
